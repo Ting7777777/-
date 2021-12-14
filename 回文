@@ -1,0 +1,13 @@
+参考https://segmentfault.com/a/1190000010515014
+
+方法1， 用 正则表达法， 思路是将原字符串翻转过来再用if-for做对比。
+function palindrome(str) {
+    str = str.replace(/[\W_]/g,"").toLowerCase();
+    for(let i = 0,len = str.length -1 ; i < str.length/2; i++) {
+        if(str[i] !== str[len-i]) {
+            return false;
+        }
+    }
+    
+    return true;
+}
