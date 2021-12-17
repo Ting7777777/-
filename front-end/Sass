@@ -43,3 +43,59 @@ nav {
     }
   }
 }
+
+mixin
+在 Sass 中，mixin 是一组 CSS 声明，可以在整个样式表中重复使用。
+
+CSS 的新功能需要一段时间适配后，所有浏览器后才能完全使用。 随着浏览器的不断升级，使用这些 CSS 规则时可能需要添加浏览器前缀。 考虑 box-shadow：
+
+div {
+  -webkit-box-shadow: 0px 0px 4px #fff;
+  -moz-box-shadow: 0px 0px 4px #fff;
+  -ms-box-shadow: 0px 0px 4px #fff;
+  box-shadow: 0px 0px 4px #fff;
+}
+对于所有具有 box-shadow 属性的元素重写此规则，或者更改每个值以测试不同的效果，需要花费大量的精力。 Mixins 就像 CSS 的函数。 以下是一个例子：
+
+@mixin box-shadow($x, $y, $blur, $c){ 
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
+}
+定义以 @mixin 开头，后跟自定义名称。 参数（$x，$y，$blur，以及上例中的 $c ）是可选的。 现在在需要 box-shadow 规则的地方，只需一行 mixin 调用而无需添加所有的浏览器前缀。 mixin 可以通过 @include 指令调用。
+
+div {
+  @include box-shadow(0px, 0px, 4px, #fff);
+}
+
+
+css里的if
+Sass 中的 @if 指令对于测试特定情况非常有用——它的工作方式与 JavaScript 中的 if 语句类似。
+
+@mixin make-bold($bool) {
+  @if $bool == true {
+    font-weight: bold;
+  }
+}
+类似 JavaScript，可以在 Sass 中使用 @else if 和 @else 测试更多条件：
+
+@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+  }
+  @else if $val == alert {
+    color: yellow;
+  }
+  @else if $val == success {
+    color: green;
+  }
+  @else {
+    color: black;
+  }
+}
+创建一个名为 border-stroke 的 mixin，它接受一个参数 $val。 mixin 应使用 @if，@else if 和 @else 检查以下条件：
+
+light - 1px solid black
+medium - 3px solid black
+heavy - 6px solid black
