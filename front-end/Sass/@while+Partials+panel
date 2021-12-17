@@ -18,3 +18,21 @@ partials 的名称以下划线（_）字符开头，这样 Sass 就知道它是 
 
 @import 'mixins'
 请注意，import 语句中不需要下划线——Sass 知道它是 partial。 将 partial 导入文件后，可以使用所有变量、mixins 和其它代码。
+将一组 CSS 样式扩展到另一个元素
+Sass 有一个名为 extend 的功能，可以很容易地从一个元素中借用 CSS 规则并在另一个元素上重用它们。
+
+例如，下面的 CSS 规则块设置了 .panel class 的样式。 它有 background-color，height 和 border。
+
+.panel{
+  background-color: red;
+  height: 70px;
+  border: 2px solid green;
+}
+现在需要另一个名为 .big-panel 的面板。 它具有与 .panel 相同的基本属性，但还需要 width 和 font-size。 可以从 .panel 复制并粘贴初始 CSS 规则，但是当添加更多类型的面板时，代码会变得重复。 extend 指令是一种重用为一个元素编写的规则的简单方法，可以为另一个元素重用并添加更多规则：
+
+.big-panel{
+  @extend .panel;
+  width: 150px;
+  font-size: 2em;
+}
+除了新样式之外，.big-panel 将具有与 .panel 相同的属性。
