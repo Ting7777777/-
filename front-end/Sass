@@ -125,3 +125,29 @@ heavy - 6px solid black
   width: 100%;
 }
 这是创建网格布局的有效方法。 现在，有了 12 个可用作 CSS class 的列宽选项。
+
+Sass 还提供 @each 指令，该指令循环遍历列表或映射中的每个项目。 在每次迭代时，变量将从列表或映射分配给当前值。
+
+@each $color in blue, red, green {
+  .#{$color}-text {color: $color;}
+}
+map 的语法略有不同。 这是一个示例：
+
+$colors: (color1: blue, color2: red, color3: green);
+
+@each $key, $color in $colors {
+  .#{$color}-text {color: $color;}
+}
+请注意，需要用 $key 变量来引用 map 中的键。 否则，编译后的 CSS 将包含 color1，color2...... 以上两个代码示例都转换为以下 CSS：
+
+.blue-text {
+  color: blue;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
