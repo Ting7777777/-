@@ -1,0 +1,19 @@
+Sass，英文全称为 “Syntactically Awesome StyleSheets”，是对 CSS 的扩展。它添加了一些基础 CSS 中不具有的新特性。Sass 简化了 CSS，这让维护项目中的样式表变得更容易。
+
+在这个 Sass 课程中，你将学习如何将数据存储在变量中、嵌套 CSS、创建可重用的样式、为样式添加逻辑和循环等等。
+
+Sass 不同于 CSS 的一个特点是它允许使用变量。 可以在 Sass 中声明变量，并为它赋值，就像在 JavaScript 中一样。
+
+在 JavaScript 中，变量是使用 let 和 const 关键字定义的。 在 Sass 中，变量以 $ 开头的，后跟变量名。
+
+这里有几个例子：
+
+$main-fonts: Arial, sans-serif;
+$headings-color: green;
+并使用变量：
+
+h1 {
+  font-family: $main-fonts;
+  color: $headings-color;
+}
+当需要把多个元素设置成相同颜色时，变量就会很有用。 一旦需要更改颜色，只需要改变这个变量的值就好。
