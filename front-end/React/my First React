@@ -1,0 +1,18 @@
+
+//这里是设计一个东西
+class MyComponent extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+  return( <div>
+  <h1>
+  My First React Component!
+  </h1>
+  </div>
+  );
+}
+
+}
+//把设计好的东西放到 这个叫做‘challenge-node’的地方。用程序的说法是讲上面那个设计好的组件渲染到下面这个DOM里面。
+ReactDOM.render(<MyComponent />,document.getElementById('challenge-node'));
