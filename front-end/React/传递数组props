@@ -1,4 +1,4 @@
-const List = (props) => {
+1.const List = (props) => {
   { /* 修改这行下面的代码 */ }
   return <p>{props.tasks.join(",")}</p>;
   { /* 修改这行上面的代码 */ }
@@ -21,6 +21,61 @@ class ToDo extends React.Component {
         <List tasks={["a","as","asd"]} />
         { /* 修改这行上面的代码 */ }
       </div>
+    );
+  }
+};
+
+<Component propsName={Value}/>
+
+2.<Items quantity={10}/>
+3.This challenge has you set a propTypes for the Items component.
+
+const Items = (props) => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+};
+
+itemName.propTypes = {
+  props: PropTypes.dataType.isRequired
+};
+
+Items.propTypes = {
+  quantity: PropTypes.number.isRequired
+};
+
+4。使用this.props访问props
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+            { /* 修改这行下面的代码 */ }
+            <Welcome name='Monica' />
+            { /* 修改这行上面的代码 */ }
+        </div>
+    );
+  }
+};
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+For this solution you need to remember first how to add props to your parent component:
+
+ <Welcome name="Jessica"/>
+Once you have the prop set, you can use this.props in your child component.
+
+ <p>Hello, <strong>{this.props.name}</strong>!</p>
+  }
+  render() {
+    return (
+        <div>
+          { /* 修改这行下面的代码 */ }
+          <p>Hello, <strong>{this.props.name}</strong>!</p>
+          { /* 修改这行上面的代码 */ }
+        </div>
     );
   }
 };
