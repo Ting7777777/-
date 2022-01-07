@@ -1,35 +1,27 @@
-#html
-<link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-/>
+#HTML
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<!--这里的rel 是为了引用 font-aswsome标签 https://www.runoob.com/font-awesome/fontawesome-tutorial.html-->
+
+<!-- relHTML中有一个名为rel的属性，是relationship这个单词的缩写，指明两个文档之间的关系，专门用来链接相关元素上，如<a>、<area>、<form>或<link>元素上，因此rel的属性值也是“链接类型”的代称。用在<link>元素中，和stylesheet链接类型一起使用，配合title属性（必须），可以定义替换CSS，可以以一种体验更好的方式实现类似换肤这种功能。https://blog.csdn.net/qq_41490938/article/details/105205149
+ https://www.w3school.com.cn/tags/att_link_rel.asp-->
 <div id="wrapper">
   <div id="quote-box">
     <div class="quote-text">
-      <i class="fa fa-quote-left"> </i><span id="text"></span>
+      <i class="fa fa-quote-left"> </i><span id="text"></span> <!-- 就是开头的“符号  属于font-aswsome https://www.cainiaojc.com/run/font-awesome-fa-quote-left.html    span是用来改这个符号颜色的，使其符合整个text的颜色-->
     </div>
     <div class="quote-author">- <span id="author"></span></div>
     <div class="buttons">
-      <a
-        class="button"
-        id="tweet-quote"
-        title="Tweet this quote!"
-        target="_top"
-      >
-        <i class="fa fa-twitter"></i>
+      <a class="button" id="tweet-quote" title="Tweet this quote!" target="_top">
+        <i class="fa fa-twitter"></i> <!-- twitter标签-->
       </a>
-      <a
-        class="button"
-        id="tumblr-quote"
-        title="Post this quote on tumblr!"
-        target="_blank"
-      >
-        <i class="fa fa-tumblr"></i>
+      <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+        <i class="fa fa-tumblr"></i><!--tumblr 标签-->
       </a>
       <button class="button" id="new-quote">New quote</button>
     </div>
   </div>
-  <div class="footer">by <a href="https://codepen.io/hezag/">hezag</a></div>
+  <div class="footer">by <a href="https://codepen.io/hezag/">hezag</a></div><!--页脚-->
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+<!--指向一个外部 JavaScript 这里是jQuery库和jQuery UI 库-  https://zhuanlan.zhihu.com/p/26440626  ->
