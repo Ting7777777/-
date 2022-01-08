@@ -25,3 +25,156 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 <!--指向一个外部 JavaScript 这里是jQuery库和jQuery UI 库-  https://zhuanlan.zhihu.com/p/26440626  ->
+
+
+#CSS
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');/* 通过import url 输入字体，属于下面的链接里面：https://fonts.google.com/specimen/Raleway*/
+/*display 
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/display*/
+* {
+  margin: 0;
+  /*margin 属性为给定元素设置所有四个（上下左右）方向的外边距属性。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin*/
+  padding: 0;
+  /*padding CSS 简写属性控制元素所有四条边的内边距区域。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding*/
+  list-style: none;
+  /*“list-style:none”样式表示设置列表项标记的类型为空，即列表项前无标记。*/
+  vertical-align: baseline;
+  /*CSS 的属性 vertical-align 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align*/
+}
+  /*这个是通配选择器，为的是给页面上所有元素添加样式
+在编程里面*一般代表的都是通配符
+
+CSS中*{}代表的是所有HTML的doc元素标签
+如：
+<body>
+<div></div>
+<p><span></span><p>
+</body>
+那么*{}  代表的就是body div p span标签元素*/
+div {
+  position: relative;
+  /*CSS position属性用于指定一个元素在文档中的定位方式。top，right，bottom 和 left 属性则决定了该元素的最终位置。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/position*/
+  z-index: 2;
+  /*z-index 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。 当元素之间重叠的时候， z-index 较大的元素会覆盖较小的元素在上层进行显示。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/z-index
+  */
+}
+
+body {
+  background-color: #333;
+  /*背景色设置成#333*/
+  color: #333;
+  /*colorCSS属性设置颜色值的前景色以及文本装饰，并设置currentcolor (en-US)值。currentcolor可以对其他颜色属性用作不直接的值，比如border-color。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/color*/
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  display: flex;
+  
+  /*css弹性盒子布局
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox*/
+  justify-content: center;
+  /*CSS justify-content 属性定义了浏览器之间，如何分配顺着弹性容器主轴(或者网格行轴) 的元素之间及其周围的空间。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content*/
+  align-items: center;
+  /*CSS align-items属性将所有直接子节点上的align-self值设置为一个组。 align-self属性设置项目在其包含块中在交叉轴方向上的对齐方式。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items*/
+  height: 100vh;
+}
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  /*将footer id 设置成块元素*/
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  color: #fff;
+  a {
+    font-weight: 500;
+    text-decoration: none;
+    /*下划线强调
+    https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration*/
+    color: #fff;
+  }
+}
+#quote-box {
+  border-radius: 3px;
+  /*边框圆润为3px*/
+  position: relative;
+  //margin:8% auto auto auto;
+  width: 450px;
+  /*width 属性用于设置元素的宽度。width 默认设置内容区域的宽度，但如果 box-sizing 属性被设置为 border-box，就转而设置边框区域的宽度。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/width*/
+  padding: 40px 50px;
+  display: table;
+  /*table 表格 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table*/
+  background-color: #fff;
+  .quote-text {
+    i {
+      font-size: 1em;
+      margin-right: 0.4em;
+    }
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both;
+    /*clear CSS 属性指定一个元素是否必须移动(清除浮动后)到在它之前的浮动元素下面。clear 属性适用于浮动和非浮动元素。
+    https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear*/
+    font-weight: 500;
+    font-size: 1.75em;
+  }
+  .quote-author {
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: right;
+  }
+  .buttons {
+    width: 450px;
+    margin: auto;
+    display: block;
+    .button {
+      height: 38px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      background-color: #333;
+      outline: none;
+      font-size: 0.85em;
+      padding: 8px 18px 6px 18px;
+      margin-top: 30px;
+      opacity: 1;
+      /*opacity属性指定了一个元素的不透明度。换言之，opacity属性指定了一个元素后面的背景的被覆盖程度。
+      https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity
+*/
+      cursor: pointer;
+      /*cursor CSS 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
+      https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor*/
+      &:hover {
+        opacity: 0.9;
+      }
+      /*https://developer.mozilla.org/zh-CN/docs/Web/CSS/:hover
+      伪元素，类似与if的使用*/
+      //https://stackoverflow.com/questions/13608855/what-does-an-before-a-pseudo-element-in-css-mean,暂时还没有搞懂。
+      &#tweet-quote,
+      &#tumblr-quote {
+        float: left;
+        padding: 0px;
+        padding-top: 8px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-right: 5px;
+        height: 30px;
+        width: 40px;
+      }
+      &#new-quote {
+        float: right;
+      }
+    }
+  }
+}
