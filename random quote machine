@@ -160,7 +160,9 @@ body {
       }
       /*https://developer.mozilla.org/zh-CN/docs/Web/CSS/:hover
       伪元素，类似与if的使用*/
-      //https://stackoverflow.com/questions/13608855/what-does-an-before-a-pseudo-element-in-css-mean,暂时还没有搞懂。
+      /*https://stackoverflow.com/questions/13608855/what-does-an-before-a-pseudo-element-in-css-mean,
+      It’s not pure CSS, is SCSS (used by Sass and LESS) that is compiled to actual CSS.
+      https://css-tricks.com/forums/topic/symbol/*/
       &#tweet-quote,
       &#tumblr-quote {
         float: left;
